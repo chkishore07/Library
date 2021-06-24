@@ -1,9 +1,42 @@
 <html>
 <head>
     <link rel="stylesheet" href="css/library.css" />
-    <script src="js/app.js" type="module"></script>
+    <script src="js/app.js" type="text/javascript"></script>
 </head>
 <body>
-<!-- Add your own html content here, and keep JS content in JS files -->
+    <!-- Add your own html content here, and keep JS content in JS files -->
+    <div>
+        <table id="tblInfo" class="tblstyle">
+            <tbody>
+                <tr style="width:100%;vertical-align:top;">
+                    <td width="40%" id="tdlist" style="border:1px solid;">
+                        <label id="lblInfo" style="font-weight:bold; padding:3px;">Please select a book</label>
+                        <br />
+                        <br />
+                        <table id="books">
+                            <tbody id="booksList"></tbody>
+                        </table>
+                    </td>
+                    <td width="60%" style="padding:6px;">
+                        <div>
+                            <input type="text" id="txtSearch" oninput="return ChangeValue(this);" />
+                            <input type="button" id="btnSearch" onclick="searchWord()" value="Search" />
+                        </div>
+                        <br />
+                        <label id="lblMessage" style="font-weight:bold;"></label>
+                        <label id="lblId" style="visibility:hidden;"></label>
+                        <label id="lblTitle" style="visibility:hidden;"></label>
+                        <br />
+                        <br />
+                        <table>
+                            <tbody id="tblWords">
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
 </body>
 </html>
